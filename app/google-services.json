@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "32161141273",
+    "firebase_url": "https://do-you-know-the-answer-3844138.firebaseio.com",
+    "project_id": "do-you-know-the-answer-3844138",
+    "storage_bucket": "do-you-know-the-answer-3844138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32161141273:android:3114af995d603300",
+        "android_client_info": {
+          "package_name": "com.webtalented.addquestion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32161141273-p8t087njmeith4hm0klkp06sra0i28fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webtalented.addquestion",
+            "certificate_hash": "0c4f48097d40cd429e934905ef678cc4ffea3400"
+          }
+        },
+        {
+          "client_id": "32161141273-b43o15a1tuvar0c1gkq3ofovf71psett.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxWtS21eLQ83tASij1KnHbsE6YrEw4D1s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32161141273-b43o15a1tuvar0c1gkq3ofovf71psett.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
