@@ -20,27 +20,34 @@ class Add : AppCompatActivity() {
 
         button.setOnClickListener {
 
-            val data : HashMap<String, Any> = HashMap()
-            data["Sual"] = sual.text.toString()
-            data["Cavab"] = cavab.text.toString()
-            data["Sehv1"] = sehv1.text.toString()
-            data["Sehv2"] = sehv2.text.toString()
-            data["Sehv3"] = sehv3.text.toString()
+            if(sual.text.isNotEmpty() && cavab.text.isNotEmpty() && sehv1.text.isNotEmpty() && sehv2.text.isNotEmpty() && sehv3.text.isNotEmpty()){
 
-            db.collection("Suallar")
-                    .add(data)
-                    .addOnSuccessListener { documentReference ->
+                val data : HashMap<String, Any> = HashMap()
+                data["Sual"] = sual.text.toString()
+                data["Cavab"] = cavab.text.toString()
+                data["Sehv1"] = sehv1.text.toString()
+                data["Sehv2"] = sehv2.text.toString()
+                data["Sehv3"] = sehv3.text.toString()
 
-                        val intent = Intent(this, MainActivity::class.java);
-                        startActivity(intent)
+                db.collection("Suallar")
+                        .add(data)
+                        .addOnSuccessListener { documentReference ->
 
-                        Log.d(this@Add.toString(), "DocumentSnapshot written with ID: " + documentReference.id) }
+                            val intent = Intent(this, MainActivity::class.java);
+                            startActivity(intent)
 
-                    .addOnFailureListener { e ->
+                            Log.d(this@Add.toString(), "DocumentSnapshot written with ID: " + documentReference.id) }
 
-                        Toast.makeText(this@Add , "Save edilmedi", Toast.LENGTH_LONG).show()
+                        .addOnFailureListener { e ->
 
-                        Log.w(this@Add.toString(), "Error adding document", e) }
+                            Toast.makeText(this@Add , "Save edilmedi", Toast.LENGTH_LONG).show()
+
+                            Log.w(this@Add.toString(), "Error adding document", e) }
+
+
+            }else{
+                Toast.makeText(this@Add , "Bosluq Qoymayin", Toast.LENGTH_LONG).show()
+            }
         }
 
     }
